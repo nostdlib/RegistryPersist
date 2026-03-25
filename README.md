@@ -1,11 +1,11 @@
 # RegistryPersist
 
-.NET Framework 2.0 library that adds a registry Run key for persistence. On load, it retrieves the device UUID via WMI and writes a `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` entry using the UUID as the key name.
+.NET Framework 2.0 library that adds a registry Run key for persistence. On load, it retrieves the device GUID from the registry and writes a `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` entry using the GUID as the key name.
 
 ## Project Structure
 
 - `Program.cs` - Entry point, executes via static constructor
-- `DeviceInfo.cs` - Retrieves device UUID from WMI (`Win32_ComputerSystemProduct`)
+- `DeviceInfo.cs` - Retrieves device GUID from `HKLM\SOFTWARE\Microsoft\Cryptography\MachineGuid`
 - `RegistryHelper.cs` - Writes to the registry Run key
 
 ## Build

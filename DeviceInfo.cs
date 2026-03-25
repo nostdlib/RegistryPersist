@@ -1,17 +1,17 @@
 using System;
-using System.Management;
+using Microsoft.Win32;
 
 public static class DeviceInfo
 {
     public static string GetUUID()
     {
-        ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT UUID FROM Win32_ComputerSystemProduct");
-
-        foreach (ManagementObject obj in searcher.Get())
+        RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Cryptography");
+        if (key != null)
         {
-            if (obj["UUID"] != null)
+            object value = key.GetValue("MachineGuid");
+            if (value != null)
             {
-                return new Guid(obj["UUID"].ToString().Trim()).ToString("N");
+                return new Guid(value.ToString().Trim()).ToString("N");
             }
         }
 
