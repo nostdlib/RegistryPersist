@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build & Debug (AnyCPU)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-debug",
+            "program": "${workspaceFolder}/bin/Debug/RegistryPersist.dll",
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": true
+        },
+        {
+            "name": "Build & Debug (x86)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-debug-x86",
+            "program": "${workspaceFolder}/bin/x86/Debug/RegistryPersist.dll",
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": true
+        },
+        {
+            "name": "Build & Debug (x64)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build-debug-x64",
+            "program": "${workspaceFolder}/bin/x64/Debug/RegistryPersist.dll",
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": true
+        },
+        {
+            "name": "Attach to Process",
+            "type": "clr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}

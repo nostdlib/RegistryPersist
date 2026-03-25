@@ -1,0 +1,109 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-debug",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Debug",
+                "/p:Platform=AnyCPU",
+                "/t:Build"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Release",
+                "/p:Platform=AnyCPU",
+                "/t:Build"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-debug-x86",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Debug",
+                "/p:Platform=x86",
+                "/t:Build"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-release-x86",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Release",
+                "/p:Platform=x86",
+                "/t:Build"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-debug-x64",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Debug",
+                "/p:Platform=x64",
+                "/t:Build"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build-release-x64",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Release",
+                "/p:Platform=x64",
+                "/t:Build"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/t:Clean"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "rebuild",
+            "type": "shell",
+            "command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\MSBuild.exe",
+            "args": [
+                "RegistryPersist.csproj",
+                "/p:Configuration=Debug",
+                "/p:Platform=AnyCPU",
+                "/t:Rebuild"
+            ],
+            "group": "build",
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
